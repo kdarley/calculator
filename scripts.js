@@ -32,7 +32,9 @@ function operate(a, b, operator){
     } else if (operator == "*"){
         return multiply(a,b)
     } else if (operator == "/"){
-        if (Number.isInteger(divide(a,b))){
+        if (b==0) {
+            return 0
+        } else if (Number.isInteger(divide(a,b))){
             return divide(a,b)
         } else{
             return divide(a,b).toFixed(5)
