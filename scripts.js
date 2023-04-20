@@ -128,7 +128,10 @@ function cleanUpResult(result){
 const equator = document.querySelector("button.equator")
 equator.addEventListener('click', () => {
     if (lastClick == 2){
-        console.log(null)
+        console.log("clicked equals before having all components")
+    } else if (numberB == null) {
+        console.log("clicked equals before having all components")
+
     } else {
         result = operate(parseFloat(numberA), parseFloat(numberB), operator),
         numberDisplayResult(result),
